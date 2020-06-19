@@ -28,11 +28,9 @@ class MetaTemplate(nn.Module):
 
     def forward(self,x):
         out  = self.feature.forward(x)
-        print("????")
         return out
 
     def parse_feature(self,x,is_feature):
-        print("?????")
         x    = Variable(x.to(self.device))
         if is_feature:
             z_all = x
@@ -46,7 +44,6 @@ class MetaTemplate(nn.Module):
         return z_support, z_query
 
     def correct(self, x):
-        print("??????") 
         scores  = self.set_forward(x)
         y_query = np.repeat(range( self.n_way ), self.n_query )#[75]
 

@@ -144,7 +144,7 @@ Meta-Test ProtoNet for Cross-Domain Few-Shot task
     python meta_test_few_shot_models.py --task cdfsl --model ResNet10 --method protonet  --train_aug
 ```
 
-Meta-Train (only trained on miniImageNet)
+Meta-Train TPN (only trained on miniImageNet)
 
 ```bash
     python ./train.py --dataset miniImageNet --model ResNet10  --method mytpn --n_shot 5 --train_aug
@@ -168,13 +168,13 @@ Meta-Train TPN (Meta-Training using EuroSAT and miniImageNet)
     python ./train_adapt.py --dataset miniImageNet --model ResNet10  --method mytpnadapteurosat --n_shot 5 --train_aug
 ```
 
-Meta-Test TPN for Few-Shot task (EuroSAT and miniImageNet)
+Meta-Test TPN for Few-Shot task (Note. the checkpoint is obtained after meta-training on EuroSAT and miniImageNet)
 
 ```bash
     python meta_test_few_shot_models.py --task fsl --model ResNet10 --method mytpnadapteurosat  --train_aug --freeze_backbone
 ```
 
-Meta-Test TPN for Cross-Domain Few-Shot task (EuroSAT and miniImageNet)
+Meta-Test TPN for Cross-Domain Few-Shot task (Note. the checkpoint is obtained after meta-training on EuroSAT and miniImageNet)
 
 ```bash
     python meta_test_few_shot_models.py --task cdfsl --model ResNet10 --method mytpnadapteurosat  --train_aug
@@ -186,13 +186,13 @@ Meta-Train TPN (Meta-Training using ISIC and miniImageNet)
     python ./train_adapt.py --dataset miniImageNet --model ResNet10  --method mytpnadaptisic --n_shot 5 --train_aug
 ```
 
-Meta-Test TPN for Few-Shot task (ISIC and miniImageNet)
+Meta-Test TPN for Few-Shot task (Note. the checkpoint is obtained after meta-training on ISIC and miniImageNet)
 
 ```bash
     python meta_test_few_shot_models.py --task fsl --model ResNet10 --method mytpnadaptisic  --train_aug --freeze_backbone
 ```
 
-Meta-Test TPN for Cross-Domain Few-Shot task (ISIC and miniImageNet)
+Meta-Test TPN for Cross-Domain Few-Shot task (Note. the checkpoint is obtained after meta-training on ISIC and miniImageNet)
 
 ```bash
     python meta_test_few_shot_models.py --task cdfsl --model ResNet10 --method mytpnadaptisic  --train_aug
