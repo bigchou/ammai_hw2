@@ -202,3 +202,12 @@ Meta-Test TPN for Cross-Domain Few-Shot task (Note. the checkpoint is obtained a
 ### Metirc Learning?
 
 Please see <strong>MetricLearningMethod</strong> folder.
+
+
+### Reference
+
+[1] [NTU_AMMAI_CDFSL](https://github.com/JiaFong/NTU_AMMAI_CDFSL)
+
+[2] [TPN-pytorch](https://github.com/csyanbin/TPN-pytorch)
+
+[3] [face.evoLVe.PyTorch](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch)
