@@ -197,3 +197,8 @@ Meta-Test TPN for Cross-Domain Few-Shot task (Note. the checkpoint is obtained a
 ```bash
     python meta_test_few_shot_models.py --task cdfsl --model ResNet10 --method mytpnadaptisic  --train_aug
 ```
+
+
+### Metirc Learning?
+
+Please see <strong>MetricLearningMethod</strong> folder.
