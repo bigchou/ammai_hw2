@@ -7,8 +7,7 @@
    * EuroSAT: https://drive.google.com/file/d/1DUj510w7726Iga34gmmhLA4meVYULrBe/view?usp=sharing
    * ISIC: https://drive.google.com/file/d/15jXP_rDEi_eusIK-kCz-DD5ZBFD3WeGF/view?usp=sharing
 
-### Pretrained Model
-   * ResNet10 Baseline/ProtoNet are provided in logs/checkpoints/miniImageNet.
+
 
 ## Description
    See https://docs.google.com/document/d/1rNuAb3D0dcXI776eKrj8iNpE2LQmCE63WU7lRTOQGIU/edit?usp=sharing
@@ -163,3 +162,38 @@ Meta-Test TPN for Cross-Domain Few-Shot task
     python meta_test_few_shot_models.py --task cdfsl --model ResNet10 --method mytpn  --train_aug
 ```
 
+Meta-Train TPN (Meta-Training using EuroSAT and miniImageNet)
+
+```bash
+    python ./train_adapt.py --dataset miniImageNet --model ResNet10  --method mytpnadapteurosat --n_shot 5 --train_aug
+```
+
+Meta-Test TPN for Few-Shot task (EuroSAT and miniImageNet)
+
+```bash
+    python meta_test_few_shot_models.py --task fsl --model ResNet10 --method mytpnadapteurosat  --train_aug --freeze_backbone
+```
+
+Meta-Test TPN for Cross-Domain Few-Shot task (EuroSAT and miniImageNet)
+
+```bash
+    python meta_test_few_shot_models.py --task cdfsl --model ResNet10 --method mytpnadapteurosat  --train_aug
+```
+
+Meta-Train TPN (Meta-Training using ISIC and miniImageNet)
+
+```bash
+    python ./train_adapt.py --dataset miniImageNet --model ResNet10  --method mytpnadaptisic --n_shot 5 --train_aug
+```
+
+Meta-Test TPN for Few-Shot task (ISIC and miniImageNet)
+
+```bash
+    python meta_test_few_shot_models.py --task fsl --model ResNet10 --method mytpnadaptisic  --train_aug --freeze_backbone
+```
+
+Meta-Test TPN for Cross-Domain Few-Shot task (ISIC and miniImageNet)
+
+```bash
+    python meta_test_few_shot_models.py --task cdfsl --model ResNet10 --method mytpnadaptisic  --train_aug
+```
